@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, rgb(37, 37, 37), rgb(28, 226, 167)) ;
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+
+}
+
+.grid-container > button{
+    cursor: pointer;
+    font-size: 1.4em;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #eee
+}
+
+
+.grid-container > .operator{
+    background:rgb(2, 153, 108);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.grid-container > .output{
+    grid-column: 1 / -1;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previews-operand{
+    color: rgb(172, 172, 172);
+    font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
+
